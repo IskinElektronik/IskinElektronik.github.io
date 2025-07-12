@@ -1,0 +1,48 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hero background styling */
+.hero-section {
+  background-image: linear-gradient(to bottom right, #e0f2fe, #ffffff);
+  transition: background 0.5s ease-in-out;
+}
+
+/* CTA Button */
+.cta-button {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* Service Cards */
+.service-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  background-color: #25d366;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5c;
+}
