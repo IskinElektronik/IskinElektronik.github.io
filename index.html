@@ -25,8 +25,24 @@
     <a href="#iletisim" class="cta-button bg-blue-700 hover:bg-blue-800 text-white py-3 px-6 rounded-xl text-lg font-semibold transition">Hemen Ulaşın</a>
   </section>
 
-  <section class="bg-gray-60 py-16 px4">
-    <h2 class="text-5z1 font-extrabold mb-4 text-blue-900 drop-shadow">Örnek Resim</h2>
+  <!-- Carousel Section -->
+  <section class="bg-gray-100 py-16 px-4">
+    <h2 class="text-4xl font-extrabold mb-10 text-center text-blue-900 drop-shadow">Örnek Resimler</h2>
+
+    <div class="relative max-w-3xl mx-auto">
+      <!-- Carousel Images -->
+      <div id="carousel-images" class="overflow-hidden rounded-xl shadow-lg">
+        <div class="flex transition-transform duration-500" style="transform: translateX(0%)">
+          <img src="https://via.placeholder.com/800x400?text=Resim+1" class="w-full flex-shrink-0" alt="Resim 1" />
+          <img src="https://via.placeholder.com/800x400?text=Resim+2" class="w-full flex-shrink-0" alt="Resim 2" />
+          <img src="https://via.placeholder.com/800x400?text=Resim+3" class="w-full flex-shrink-0" alt="Resim 3" />
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-700 text-white px-3 py-1 rounded-l hover:bg-blue-900">‹</button>
+      <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-700 text-white px-3 py-1 rounded-r hover:bg-blue-900">›</button>
+    </div>
   </section>
 
   <!-- Services -->
@@ -81,5 +97,7 @@
     <p class="text-sm">&copy; 2025 Işkın Elektronik - Tüm hakları saklıdır.</p>
   </footer>
 
+  <!-- Carousel JS -->
+  <script src="handlers/carousel.js" defer></script>
 </body>
 </html>
