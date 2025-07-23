@@ -32,3 +32,8 @@ function resetAutoplay() {
   clearInterval(autoplay);
   autoplay = setInterval(nextSlide, 3000);
 }
+
+function ostam()
+{
+  window.location.href = 'ostam.html';
+}
