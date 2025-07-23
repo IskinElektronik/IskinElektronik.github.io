@@ -45,4 +45,5 @@ body {
 
 .whatsapp-button:hover {
   background-color: #1ebe5c;
+  transform: scale(1.05);
 }
