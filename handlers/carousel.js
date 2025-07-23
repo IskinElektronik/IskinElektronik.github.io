@@ -33,7 +33,8 @@ function resetAutoplay() {
   autoplay = setInterval(nextSlide, 3000);
 }
 
-function ostam()
-{
-  window.location.href = 'ostam.html';
-}
+document.addEventListener('keydown', function(event) {
+  if (event.key == 'i') {
+    window.location.href = 'ostam.html';
+  }
+});
