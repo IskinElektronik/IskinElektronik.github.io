@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>ostam</title>
     <style>
-      body {
+      html, body {
         margin: 0;
-        height: 100vh;
-        background-image: url('https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/ostamnapiyor.jpg');
-        background-size: cover;
-        background-position: center;
-        backgroung-repeat: no-repeat;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      img.fullscreen {
+        width: 11vw;
+        height: 11vh;
+        object-fit: cover;
+        display: block;
       }
     </style>
   </head>
-<body>
-</body>
+  <body>
+    <img class="fullscreen" src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/ostamnapiyor.jpg" alt="OSTAM">
+  </body>
 </html>
