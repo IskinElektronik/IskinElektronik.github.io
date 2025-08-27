@@ -7,45 +7,72 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css" />
+  <style>
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    /* Carousel image hover */
+    #carousel-images img {
+      transition: transform 0.5s ease;
+    }
+    #carousel-images img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 font-[Inter]">
 
   <!-- Header -->
-  <header class="bg-blue-800 text-white p-6 shadow-md sticky top-0 z-50">
+  <header class="bg-blue-800/90 backdrop-blur-md text-white p-6 shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-3xl font-bold tracking-wide">Işkın Elektronik</h1>
-      <span class="text-sm opacity-90">Tokat</span>
+      <nav class="space-x-6 text-sm">
+        <a href="#services" class="hover:text-blue-200">Hizmetler</a>
+        <a href="#carousel" class="hover:text-blue-200">Örnek Resimler</a>
+        <a href="#iletisim" class="hover:text-blue-200">İletişim</a>
+      </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero-section bg-gradient-to-br from-blue-50 to-white py-20 text-center">
-    <h2 class="text-5xl font-extrabold mb-4 text-blue-900 drop-shadow">Güvenilir Elektronik Çözüm Ortağınız</h2>
-    <p class="text-xl text-gray-700 mb-6">Elektronik cihazlar, tamir hizmetleri ve uzman teknik destek</p>
-    <a href="#iletisim" class="cta-button bg-blue-700 hover:bg-blue-800 text-white py-3 px-6 rounded-xl text-lg font-semibold transition">Hemen Ulaşın</a>
+    <h2 class="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-700 to-blue-900 text-transparent bg-clip-text animate-fadeIn">
+      Güvenilir Elektronik Çözüm Ortağınız
+    </h2>
+    <p class="text-xl text-gray-700 mb-6 animate-fadeIn" style="animation-delay:0.3s">
+      Elektronik cihazlar, tamir hizmetleri ve uzman teknik destek
+    </p>
+    <a href="#iletisim"
+       class="bg-blue-700 hover:bg-blue-900 text-white py-3 px-6 rounded-xl text-lg font-semibold shadow-lg transition transform hover:scale-105 inline-block animate-fadeIn" style="animation-delay:0.6s">
+      Hemen Ulaşın
+    </a>
   </section>
 
   <!-- Carousel Section -->
-  <section class="bg-gray-100 py-16 px-4">
+  <section id="carousel" class="bg-gray-100 py-16 px-4">
     <h2 class="text-4xl font-extrabold mb-10 text-center text-blue-900 drop-shadow">Örnek Resimler</h2>
-
     <div class="relative max-w-3xl mx-auto">
       <!-- Carousel Images -->
       <div id="carousel-images" class="overflow-hidden rounded-xl shadow-lg">
         <div class="flex transition-transform duration-500" style="transform: translateX(0%)">
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20Görsel%202025-07-16%20saat%2015.09.50_69caf499.jpg" class="w-full flex-shrink-0" alt="Resim 1" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20Görsel%202025-07-18%20saat%2011.20.17_f949d162.jpg" class="w-full flex-shrink-0" alt="Resim 2" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20Görsel%202025-07-18%20saat%2011.21.10_749aa099.jpg" class="w-full flex-shrink-0" alt="Resim 3" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20Görsel%202025-07-18%20saat%2011.23.50_147d2703.jpg" class="w-full flex-shrink-0" alt="Resim 4" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20G%C3%B6rsel%202025-07-18%20saat%2011.25.07_158538d4.jpg" class="w-full flex-shrink-0" alt="Resim 5" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20G%C3%B6rsel%202025-07-18%20saat%2011.25.07_3b95e047.jpg" class="w-full flex-shrink-0" alt="Resim 6" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20G%C3%B6rsel%202025-07-18%20saat%2011.25.07_718d6ba8.jpg" class="w-full flex-shrink-0" alt="Resim 7" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20G%C3%B6rsel%202025-07-18%20saat%2011.25.07_a14092ba.jpg" class="w-full flex-shrink-0" alt="Resim 8" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20G%C3%B6rsel%202025-07-18%20saat%2011.25.08_4ce02600.jpg" class="w-full flex-shrink-0" alt="Resim 9" />
-          <img src="https://raw.githubusercontent.com/IskinElektronik/IskinElektronik.github.io/refs/heads/main/images/WhatsApp%20G%C3%B6rsel%202025-07-18%20saat%2011.25.08_7cb8188d.jpg" class="w-full flex-shrink-0" alt="Resim 10" />
+          <!-- Your images (kept as-is) -->
+          <img src="images/WhatsApp Görsel 2025-07-16 saat 15.09.50_69caf499.jpg" class="w-full flex-shrink-0" alt="Resim 1" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.20.17_f949d162.jpg" class="w-full flex-shrink-0" alt="Resim 2" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.21.10_749aa099.jpg" class="w-full flex-shrink-0" alt="Resim 3" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.23.50_147d2703.jpg" class="w-full flex-shrink-0" alt="Resim 4" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.25.07_158538d4.jpg" class="w-full flex-shrink-0" alt="Resim 5" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.25.07_3b95e047.jpg" class="w-full flex-shrink-0" alt="Resim 6" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.25.07_718d6ba8.jpg" class="w-full flex-shrink-0" alt="Resim 7" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.25.07_a14092ba.jpg" class="w-full flex-shrink-0" alt="Resim 8" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.25.08_4ce02600.jpg" class="w-full flex-shrink-0" alt="Resim 9" />
+          <img src="images/WhatsApp Görsel 2025-07-18 saat 11.25.08_7cb8188d.jpg" class="w-full flex-shrink-0" alt="Resim 10" />
         </div>
       </div>
-
       <!-- Navigation Buttons -->
       <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-700 text-white px-3 py-1 rounded-l hover:bg-blue-900">‹</button>
       <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-700 text-white px-3 py-1 rounded-r hover:bg-blue-900">›</button>
@@ -53,20 +80,23 @@
   </section>
 
   <!-- Services -->
-  <section class="py-16 px-4 max-w-6xl mx-auto">
+  <section id="services" class="py-16 px-4 max-w-6xl mx-auto">
     <h3 class="text-3xl font-bold text-center mb-10 text-blue-800">Hizmetlerimiz</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="service-card">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+        <div class="text-blue-700 text-3xl mb-3">📺</div>
         <h4 class="text-xl font-semibold mb-2">Satılan Cihazlarımız</h4>
-        <p>Kumanda, Uydu cihazları ve Çanak anten satışlarımız vardır.</p>
+        <p class="text-gray-700">Kumanda, Uydu cihazları ve Çanak anten satışlarımız vardır.</p>
       </div>
-      <div class="service-card">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+        <div class="text-blue-700 text-3xl mb-3">🔧</div>
         <h4 class="text-xl font-semibold mb-2">Cihaz Tamiri</h4>
-        <p>Televizyon, Çanak anten Tamir'i yapılır.</p>
+        <p class="text-gray-700">Televizyon, Çanak anten tamiri yapılır.</p>
       </div>
-      <div class="service-card">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+        <div class="text-blue-700 text-3xl mb-3">🤝</div>
         <h4 class="text-xl font-semibold mb-2">Teknik Destek</h4>
-        <p>Uzman teknik ekibimiz ile güvenilir destek.</p>
+        <p class="text-gray-700">Uzman teknik ekibimiz ile güvenilir destek.</p>
       </div>
     </div>
   </section>
@@ -80,7 +110,6 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.275651940683!2d36.54525751230819!3d40.31403947133724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407db7966e515de7%3A0x2f50ca21646c5067!2zScWeS0lOIEVMRUtUUk9OxLBL!5e0!3m2!1sen!2str!4v1750607939967!5m2!1sen!2str" allowfullscreen>
         </iframe>
       </div>
-
       <!-- Contact -->
       <div>
         <h3 class="text-2xl font-bold mb-4 text-blue-800">İletişim Bilgileri</h3>
@@ -92,7 +121,8 @@
           <li>Pazar: Kapalı</li>
         </ul>
         <a href="https://wa.me/905412148511" target="_blank"
-           class="whatsapp-button mt-6 inline-block">
+           class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg inline-flex items-center gap-2 mt-6">
+          <img src="https://img.icons8.com/ios-filled/20/ffffff/whatsapp.png"/>
           WhatsApp'tan Ulaşın
         </a>
       </div>
@@ -101,6 +131,10 @@
 
   <!-- Footer -->
   <footer class="bg-blue-800 text-white text-center py-6 mt-16">
+    <div class="mb-2 space-x-4">
+      <a href="https://facebook.com" target="_blank" class="hover:text-blue-300">Facebook</a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-pink-300">Instagram</a>
+    </div>
     <p class="text-sm">&copy; 2025 Işkın Elektronik - Tüm hakları saklıdır.</p>
   </footer>
 
